@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  /* height: 100vh; */
+}
+.quiz-container{
+  padding: 2rem 4rem; 
+  border: 2px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  width: 700px;
+  margin: 8% auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+}
+.quiz-container h1{
+  text-align: center;
+  font-family: Reddit Mono;
+  margin-bottom: 1rem;
+}
+
+.question-container{
+  /* border: 2px solid rebeccapurple; */
+  padding: 1rem;
+}
+.question-container h2{
+  margin-bottom: 1rem;
+  font-family: Outfit , sans-serif;
+  font-weight: 600;
+}
+.question-container .ques{
+  padding: 0.8rem;
+  /* background-color: rgb(222, 227, 231); */
+  background-color: rgb(218, 226, 235);
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  font-family: Reddit Mono , sans-serif ;
+  font-weight: 500;
+  font-size: 18px;
+  color:  rgb(153 27 27);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+ol{
+  padding-left: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: Reddit Mono;
+}
+ol li{
+  margin-bottom: 1rem;
+}
+ol li button {
+  padding: 5px 12px;
+  font-family: Outfit , sans-serif;
+  font-size: 16px;
+  border: 2px solid rgb(51, 9, 9);
+  background-color: rgb(214, 218, 218);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+ol li button:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.timer{
+  margin-bottom: 1rem;
+  font-size: 17px;
+  font-family: Roboto , sans-serif;
+  color: rgb(51, 9, 9);
+  font-weight: 600;
+}
+
+.skip{
+  padding: 5px 12px;
+  font-family: Roboto , sans-serif;
+  font-size: 16px;
+  background-color: rgb(15 118 110);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: rgb(134 239 172);
+  border: 2px solid rgb(15 118 110);
+}
+.skip:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.result-container{
+  text-align: center;
+  font-family: Outfit , sans-serif;
+}
+
+.result-container h3{
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.result-container p span{
+  font-weight: 600;
+  font-size: 18px;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: conic-gradient(from -90deg,#000 90deg,#0000 0);
+  background: var(--c), var(--c);
+  background-size: 40% 40%;
+  animation: l20 1.5s infinite;
+  margin: 5% auto;
+}
+@keyframes l20 {
+ 0%,
+ 20%  {background-position: 0 0           ,0            calc(100%/3)}
+ 33%  {background-position: 0 0           ,calc(100%/3) calc(100%/3)}
+ 66%  {background-position: 0 calc(100%/3),calc(100%/3) 0  }
+ 80%,
+ 100% {background-position: 0 calc(100%/3),0            0  }
+}
+
+@media screen and (max-width:700px) {
+  .quiz-container{
+    width: 100%;
+    padding: 1.5rem;
+    margin: 6rem auto;
+  }
+}
+@media screen and (max-width:500px) {
+  .quiz-container{
+
+    padding:0.5rem;
+   
+  }
+}
